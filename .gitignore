@@ -1,3 +1,5 @@
 *:Zone.Identifier
 /.venv
 /.vscode
+*.bak
+/last_convert_mode.txt
