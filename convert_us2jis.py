@@ -1,5 +1,5 @@
-# %%
 import csv
+import os
 import re
 import shutil
 
@@ -49,9 +49,12 @@ def make_replacer(mapping):
     return _replacer
 
 
-# %%
-filename_keymap = "./config/roBa.keymap"
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+filename_keymap = "./config/roBa.keymap"
+fileneme_lastmode = "./last_convert_mode.txt"
+
+# select mode
 mode_select = input("Select mode 1(us->jis) or 2(jis->us): ")
 if mode_select == "1":
     mode_convert = "us2jis"
@@ -61,17 +64,31 @@ else:
     print("Invalid mode.")
     exit()
 
-csv_us2jis = f"table_{mode_convert}.csv"
+csv_table = f"table_{mode_convert}.csv"
+
+# check if conversion has already been done
+match_layout = re.match(r"(us|jis)2(us|jis)", mode_convert)
+layout_before = match_layout.group(1)
+layout_after = match_layout.group(2)
+
+if os.path.exists(fileneme_lastmode):
+    with open(fileneme_lastmode, "r", encoding="utf-8") as f:
+        last_mode = f.read().strip()
+    if last_mode == mode_convert:
+        print(f"{layout_before}->{layout_after} conversion has already been done.")
+        exit()
+
+with open(fileneme_lastmode, "w", encoding="utf-8") as f:
+    f.write(mode_convert)
 
 # make keymap backup
 shutil.copyfile(filename_keymap, filename_keymap + ".bak")
 
 # read keymap as dictionary
-with open(csv_us2jis, "r", encoding="utf-8") as f:
+with open(csv_table, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     l = [row for row in reader]
 
-# %%
 # convert keymap
 l_jis = [d.get("jis_zmk") for d in l]
 l_us = [d.get("us_zmk") for d in l]
@@ -83,7 +100,6 @@ elif mode_convert == "jis2us":
     re_jis = [re.compile(f"\\b{r}\\b") for r in l_jis]
     mapping = dict(zip(re_jis, l_us))
 
-# %%
 with open(filename_keymap, "r", encoding="utf-8") as f:
     keymap = f.read()
     keymap_converted = multi_replace(keymap, mapping)
