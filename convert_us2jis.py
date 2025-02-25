@@ -94,11 +94,16 @@ l_jis = [d.get("jis_zmk") for d in l]
 l_us = [d.get("us_zmk") for d in l]
 
 if mode_convert == "us2jis":
-    re_us = [re.compile(f"\\b{r}\\b") for r in l_us]
-    mapping = dict(zip(re_us, l_jis))
+    l_from = l_us
+    l_to = l_jis
 elif mode_convert == "jis2us":
-    re_jis = [re.compile(f"\\b{r}\\b") for r in l_jis]
-    mapping = dict(zip(re_jis, l_us))
+    l_from = l_jis
+    l_to = l_us
+l_from = [re.sub(r"(\(|\))", r"\\\1", r) for r in l_from]
+
+re_from = [re.compile(f"(^|\\s+){r}($|\\s+|>)") for r in l_from]
+re_to = [f"\\1{r}\\2" for r in l_to]
+mapping = dict(zip(re_from, re_to))
 
 with open(filename_keymap, "r", encoding="utf-8") as f:
     keymap = f.read()
