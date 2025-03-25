@@ -171,8 +171,8 @@
             bindings = <
 &trans  &trans                       &trans  &trans    &trans                                          &trans  &trans    &trans    &trans    &trans
 &trans  &mkp_catia_rotation MB3 MB2  &trans  &mkp MB3  &trans                      &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans                       &trans  &trans    &trans                      &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans                       &trans  &trans    &mkp_catia_scaling MB3 MB2  &trans      &trans  &trans                                &trans
+&trans  &trans                       &trans  &trans    &mkp_catia_scaling MB3 MB2  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans                       &trans  &trans    &trans                      &trans      &trans  &trans                                &trans
             >;
         };
 
