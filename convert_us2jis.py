@@ -101,7 +101,7 @@ elif mode_convert == "jis2us":
     l_to = l_us
 l_from = [re.sub(r"(\(|\))", r"\\\1", r) for r in l_from]
 
-re_from = [re.compile(f"(^|\\s+){r}($|\\s+|>)") for r in l_from]
+re_from = [re.compile(f"(^|\\(|\\s+){r}($|\\)|>|\\s+)") for r in l_from]
 re_to = [f"\\1{r}\\2" for r in l_to]
 mapping = dict(zip(re_from, re_to))
 
