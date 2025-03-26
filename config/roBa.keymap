@@ -42,7 +42,7 @@
         };
 
         or {
-            bindings = <&kp LS(INT_YEN)  >;
+            bindings = <&kp LS(INT_YEN)>;
             key-positions = <2 3>;
         };
 

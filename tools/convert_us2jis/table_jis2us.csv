@@ -30,7 +30,7 @@ jis,jis_zmk,us,us_zmk
 ],RBKT,\,BACKSLASH
 },RIGHT_BRACE,|,PIPE
 },RBRC,|,PIPE
-|,PIPE,Shift+\,LS(INT_YEN) 
+|,PIPE,Shift+\,LS(INT_YEN)
 半角/全角,LANGUAGE_5,`,GRAVE
 半角/全角,LANG5,`,GRAVE
 半角/全角,LANG_ZENKAKUHANKAKU,`,GRAVE
