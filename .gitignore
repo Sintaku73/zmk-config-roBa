@@ -2,5 +2,5 @@
 /.venv
 /.vscode
 *.bak
-/last_convert_mode.txt
-/firmware
+last_convert_mode.txt
+firmware/

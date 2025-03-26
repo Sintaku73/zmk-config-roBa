@@ -51,7 +51,7 @@ def make_replacer(mapping):
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-filename_keymap = "./config/roBa.keymap"
+filename_keymap = os.path.expanduser("~/zmk-config-roBa/config/roBa.keymap")
 fileneme_lastmode = "./last_convert_mode.txt"
 
 # select mode
