@@ -9,8 +9,10 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+    quick-tap-ms = <200>;
 };
+
+&lt { quick-tap-ms = <200>; };
 
 / {
     combos {
@@ -129,10 +131,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                          &kp T                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &lt 4 D       &kp F                          &kp G        &kp C_MUTE          &kp RC(W)      &kp H        &kp J  &kp K      &kp L    &lt 4 SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                          &kp B        &mo 6               &none          &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INT_MUHENKAN  &lt 1 SPACE  &kp INT_HENKAN      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R               &kp T                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &lt 4 D       &kp F               &kp G        &kp C_MUTE          &kp RC(W)      &kp H        &kp J  &kp K      &kp L    &lt 4 SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B        &mo 6               &none          &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 INT_MUHENKAN  &lt 1 SPACE  &kp INT_HENKAN      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -169,10 +171,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                       &trans  &trans    &trans                                          &trans  &trans    &trans    &trans    &trans
+&trans  &trans                       &trans  &trans    &trans                                          &trans  &trans    &mo 5     &trans    &trans
 &trans  &mkp_catia_rotation MB3 MB2  &trans  &mkp MB3  &trans                      &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans                       &trans  &trans    &mkp_catia_scaling MB3 MB2  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans                       &trans  &trans    &trans                      &trans      &trans  &trans                                &trans
+&trans  &trans                       &trans  &mo 2     &mo 1                       &trans      &trans  &trans                                &trans
             >;
         };
 
