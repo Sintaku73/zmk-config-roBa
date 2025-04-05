@@ -32,7 +32,7 @@
 
         cpi-scroll {
             layers = <5>;
-            input-processors = <&zip_scroll_scaler 2 3>;
+            input-processors = <&zip_scroll_scaler 1 6>;
         };
     };
 };
