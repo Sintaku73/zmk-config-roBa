@@ -139,7 +139,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R               &kp T                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp Q             &kp W         &lt 4 E       &kp R               &kp T                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &lt 4 D       &kp F               &kp G        &kp C_MUTE            &kp RC(W)      &kp H        &kp J  &kp K      &kp L    &lt 4 SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B        &mo 6                 &none          &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 INT_MUHENKAN  &lt 3 SPACE  &lt 4 INT_HENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
@@ -179,8 +179,8 @@
 
         MOUSE {
             bindings = <
-&trans     &trans  &trans  &trans  &trans                      &trans  &trans                      &mo 5     &trans    &trans
-&kp LCTRL  &mo 1   &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1                    &mkp MB3  &mkp MB2  &trans
+&trans     &mo 1   &trans  &trans  &trans                      &trans  &trans                      &mo 5     &trans    &trans
+&kp LCTRL  &mo 1   &trans  &mo 2   &trans  &trans      &trans  &trans  &mkp MB1                    &mkp MB3  &mkp MB2  &trans
 &trans     &mo 2   &trans  &trans  &trans  &trans      &trans  &trans  &mkp_catia_scaling MB3 MB2  &trans    &trans    &trans
 &trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
