@@ -79,6 +79,11 @@
             key-positions = <19 20>;
             layers = <4>;
         };
+
+        equal {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <30 31>;
+        };
     };
 
     macros {
@@ -159,19 +164,19 @@
 
         NUM {
             bindings = <
-&trans   &kp F7  &kp F8  &kp F9  &kp F12                              &kp DOUBLE_QUOTES  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COLON
-&kp DOT  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp KP_NUMLOCK  &kp SLASH          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
-&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans      &kp UNDERSCORE  &kp KP_NUMBER_0    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mt RIGHT_SHIFT EQUAL
-&trans   &trans  &trans  &trans  &trans   &trans      &trans          &kp RIGHT_ALT                                                         &trans
+&trans   &kp F7  &kp F8  &kp F9  &kp F12                              &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp COLON
+&kp DOT  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp KP_NUMLOCK  &kp SLASH          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans      &kp UNDERSCORE  &kp NUMBER_0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &mt RIGHT_SHIFT EQUAL
+&trans   &trans  &trans  &trans  &trans   &trans      &trans          &kp RIGHT_ALT                                                &trans
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE             &kp LC(PAGE_UP)  &kp UP_ARROW      &kp LC(PAGE_DOWN)  &kp PAGE_UP                                         &kp PAGE_DOWN  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))
-&kp HOME               &kp LEFT_ARROW   &kp DOWN_ARROW    &kp RIGHT_ARROW    &kp END            &trans            &trans         &trans         &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &kp LC(LG(D))
-&kp LC(RIGHT_BRACKET)  &kp C_AC_BACK    &kp LA(UP_ARROW)  &kp C_AC_FORWARD   &kp LC(BACKSLASH)  &kp LEFT_ALT      &kp RIGHT_ALT  &trans         &kp LG(LS(LEFT_ARROW))  &trans              &kp LG(LS(RIGHT_ARROW))  &kp RIGHT_SHIFT
-&trans                 &trans           &trans            &trans             &trans             &trans            &trans         &trans                                                                              &trans
+&kp ESCAPE                        &kp LC(PAGE_UP)                &mt LC(UP_ARROW) UP_ARROW      &kp LC(PAGE_DOWN)                &kp PAGE_UP                                         &kp PAGE_DOWN  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(F4))
+&mt LS(HOME) HOME                 &mt LC(LEFT_ARROW) LEFT_ARROW  &mt LC(DOWN_ARROW) DOWN_ARROW  &mt LC(RIGHT_ARROW) RIGHT_ARROW  &mt LS(END) END    &trans            &trans         &kp RCTRL      &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &kp LC(LG(D))
+&mt LEFT_SHIFT LC(RIGHT_BRACKET)  &kp C_AC_BACK                  &kp LA(UP_ARROW)               &kp C_AC_FORWARD                 &kp LC(BACKSLASH)  &kp LEFT_ALT      &kp RIGHT_ALT  &trans         &kp LG(LS(LEFT_ARROW))  &trans              &kp LG(LS(RIGHT_ARROW))  &kp RIGHT_SHIFT
+&trans                            &trans                         &trans                         &trans                           &trans             &trans            &trans         &trans                                                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -179,10 +184,10 @@
 
         MOUSE {
             bindings = <
-&trans     &mo 1   &trans  &trans  &trans                      &trans  &trans                      &mo 5     &trans    &trans
-&kp LCTRL  &mo 1   &trans  &mo 2   &trans  &trans      &trans  &trans  &mkp MB1                    &mkp MB3  &mkp MB2  &trans
-&trans     &mo 2   &trans  &trans  &trans  &trans      &trans  &trans  &mkp_catia_scaling MB3 MB2  &trans    &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
+&trans     &mo 1   &trans  &trans  &trans                              &trans  &trans                      &mo 5     &trans    &trans
+&kp LCTRL  &mo 1   &trans  &mo 2   &trans  &trans              &trans  &trans  &mkp MB1                    &mkp MB3  &mkp MB2  &trans
+&trans     &mo 2   &trans  &trans  &trans  &kp LEFT_SHIFT      &trans  &trans  &mkp_catia_scaling MB3 MB2  &trans    &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans              &trans  &trans                                                  &trans
             >;
         };
 
