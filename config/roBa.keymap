@@ -84,6 +84,16 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <30 31>;
         };
+
+        to_mouse_layer {
+            bindings = <&to 4>;
+            key-positions = <11 12 13>;
+        };
+
+        return_default_layer {
+            bindings = <&to 0>;
+            key-positions = <18 19 20>;
+        };
     };
 
     macros {
