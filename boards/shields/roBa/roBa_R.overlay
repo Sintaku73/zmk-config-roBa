@@ -22,17 +22,17 @@
         device = <&trackball>;
 
         cpi-low {
-            layers = <2>;
+            layers = <1>;
             input-processors = <&zip_xy_scaler 7 16>;
         };
 
         cpi-high {
-            layers = <3>;
+            layers = <2>;
             input-processors = <&zip_xy_scaler 5 3>;
         };
 
         cpi-scroll {
-            layers = <5>;
+            layers = <7>;
             input-processors = <&zip_scroll_scaler 1 6>;
         };
     };
