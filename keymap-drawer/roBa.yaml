@@ -11,7 +11,7 @@ layers:
   - {t: I, h: SCROLL}
   - O
   - P
-  - A
+  - {t: A, h: LCTRL}
   - S
   - {t: D, h: MOUSE}
   - F
@@ -29,7 +29,7 @@ layers:
   - V
   - B
   - BLUETOOTH
-  - ''
+  - RCTRL
   - N
   - M
   - ','
@@ -376,6 +376,7 @@ combos:
   k: _
 - p: [18, 19]
   k: '~'
+  l: [default, BLUETOOTH, DUMMY, SYMBOL, NUM, ARROW, SCROLL]
 - p: [19, 20]
   k: '&mkp_catia_rotation MB3 MB2'
   l: [MOUSE]
