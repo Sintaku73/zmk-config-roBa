@@ -86,6 +86,7 @@
         tilde {
             bindings = <&kp PLUS>;
             key-positions = <18 19>;
+            layers = <0 1 2 4 5 6 7>;
         };
 
         catia_rotation {
@@ -181,8 +182,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &lt 3 E       &kp R               &kp T                                             &kp Y        &kp U  &lt 7 I    &kp O    &kp P
-&kp A             &kp S         &lt 3 D       &kp F               &kp G        &kp C_MUTE            &kp RC(W)      &kp H        &kp J  &kp K      &kp L    &lt 3 SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B        &mo 1                 &none          &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LCTRL A       &kp S         &lt 3 D       &kp F               &kp G        &kp C_MUTE            &kp RC(W)      &kp H        &kp J  &kp K      &kp L    &lt 3 SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B        &mo 1                 &kp RCTRL      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 5 INT_MUHENKAN  &lt 6 SPACE  &lt 3 INT_HENKAN      &kp BACKSPACE  &lt 4 ENTER                             &kp DEL
             >;
 
