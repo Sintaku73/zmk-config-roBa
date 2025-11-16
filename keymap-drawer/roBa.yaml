@@ -282,7 +282,7 @@ layers:
   - {t: END, h: Sft+END}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+TAB
   - Gui+LEFT ARROW
   - Gui+DOWN ARROW
   - Gui+RIGHT ARROW
@@ -294,7 +294,7 @@ layers:
   - Ctl+]
   - LEFT ALT
   - RIGHT ALT
-  - {t: ▽, type: trans}
+  - Ctl+Sft+TAB
   - Gui+Sft+LEFT ARROW
   - Ctl+Gui+D
   - Gui+Sft+RIGHT ARROW
